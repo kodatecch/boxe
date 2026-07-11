@@ -365,8 +365,9 @@
     border:1.5px dashed var(--line);
     background:var(--cream);
     display:flex; align-items:center; justify-content:center;
+    padding:4px;
   }
-  .bonus-photo svg{ width:28px; height:28px; opacity:0.45; }
+  .bonus-photo img{ width:100%; height:100%; object-fit:contain; filter:drop-shadow(0 2px 6px rgba(0,0,0,0.1)); }
   .bonus-num{
     font-family:var(--font-stamp); font-size:11.5px; color:var(--red-deep);
     text-transform:uppercase; letter-spacing:0.05em; display:block; margin-bottom:6px;
@@ -439,6 +440,11 @@
   .plan-list li.off{ color:#A39C8A; text-decoration:line-through; }
   .li-mark{ font-family:var(--font-stamp); font-size:14px; flex-shrink:0; width:16px; color:var(--blue-deep);}
   .li-mark.off{ color:#C4BCA9; }
+  .plan-list .tag{
+    display:inline-block; font-family:var(--font-stamp); font-size:10px; font-weight:700;
+    background:var(--ochre); color:var(--ink);
+    padding:3px 6px; margin-left:6px; border-radius:3px; text-transform:uppercase; vertical-align:middle; line-height:1;
+  }
 
   .exclusive-box{
     background:var(--cream);
@@ -544,7 +550,7 @@
       </div>
       <div class="hero-facts">
         <div><b>365</b><span>Días de entreno</span></div>
-        <div><b>04</b><span>Bonos incluidos</span></div>
+        <div><b>05</b><span>Bonos incluidos</span></div>
         <div><b>Ya</b><span>Acceso inmediato</span></div>
       </div>
     </div>
@@ -778,12 +784,12 @@
   <div class="wrap">
     <div class="sec-head center">
       <span class="sec-tab">Anexos del cuaderno</span>
-      <h2 class="sec-title">Además recibes 4 bonos exclusivos</h2>
+      <h2 class="sec-title">Además recibes 5 bonos exclusivos</h2>
     </div>
 
     <div class="bonus-grid">
       <div class="bonus-card punch">
-        <div class="bonus-photo"><svg viewBox="0 0 24 24" fill="none"><rect x="4" y="4" width="16" height="16" rx="1" stroke="#1E1A16" stroke-width="1.4"/><circle cx="9" cy="10" r="1.6" stroke="#1E1A16" stroke-width="1.2"/><path d="M5 17l5-5 3 3 3-4 3 6" stroke="#1E1A16" stroke-width="1.2"/></svg></div>
+        <div class="bonus-photo"><img src="protecto_fuerza.png" alt="Fuerza 90"></div>
         <div>
           <span class="bonus-num">Bono 01</span>
           <h4>Fuerza 90</h4>
@@ -792,7 +798,7 @@
         </div>
       </div>
       <div class="bonus-card punch">
-        <div class="bonus-photo"><svg viewBox="0 0 24 24" fill="none"><rect x="4" y="4" width="16" height="16" rx="1" stroke="#1E1A16" stroke-width="1.4"/><circle cx="9" cy="10" r="1.6" stroke="#1E1A16" stroke-width="1.2"/><path d="M5 17l5-5 3 3 3-4 3 6" stroke="#1E1A16" stroke-width="1.2"/></svg></div>
+        <div class="bonus-photo"><img src="nutricion.png" alt="Nutrición para Boxeadores"></div>
         <div>
           <span class="bonus-num">Bono 02</span>
           <h4>Nutrición para Boxeadores</h4>
@@ -801,7 +807,7 @@
         </div>
       </div>
       <div class="bonus-card punch">
-        <div class="bonus-photo"><svg viewBox="0 0 24 24" fill="none"><rect x="4" y="4" width="16" height="16" rx="1" stroke="#1E1A16" stroke-width="1.4"/><circle cx="9" cy="10" r="1.6" stroke="#1E1A16" stroke-width="1.2"/><path d="M5 17l5-5 3 3 3-4 3 6" stroke="#1E1A16" stroke-width="1.2"/></svg></div>
+        <div class="bonus-photo"><img src="biblioteca.png" alt="180 Sesiones Avanzadas"></div>
         <div>
           <span class="bonus-num">Bono 03</span>
           <h4>180 Sesiones Avanzadas</h4>
@@ -810,7 +816,7 @@
         </div>
       </div>
       <div class="bonus-card punch">
-        <div class="bonus-photo"><svg viewBox="0 0 24 24" fill="none"><rect x="4" y="4" width="16" height="16" rx="1" stroke="#1E1A16" stroke-width="1.4"/><circle cx="9" cy="10" r="1.6" stroke="#1E1A16" stroke-width="1.2"/><path d="M5 17l5-5 3 3 3-4 3 6" stroke="#1E1A16" stroke-width="1.2"/></svg></div>
+        <div class="bonus-photo"><img src="sistema_de_progresso.png" alt="Comunidad de Entreno"></div>
         <div>
           <span class="bonus-num">Bono 04</span>
           <h4>Comunidad de Entreno</h4>
@@ -818,11 +824,20 @@
           <div class="price-row"><span class="price-old">de $17</span><span class="price-free">Por $0.00</span></div>
         </div>
       </div>
+      <div class="bonus-card punch">
+        <div class="bonus-photo"><img src="abdomen.png" alt="Abdomen de Acero"></div>
+        <div>
+          <span class="bonus-num">Bono 05</span>
+          <h4>Abdomen de Acero</h4>
+          <p>Rutina especializada para desarrollar un core resistente y preparado para recibir golpes.</p>
+          <div class="price-row"><span class="price-old">de $29</span><span class="price-free">Por $0.00</span></div>
+        </div>
+      </div>
     </div>
 
     <div class="bonus-total">
       <div class="lbl">Valor total de los bonos:</div>
-      <div class="old">$92</div>
+      <div class="old">$121</div>
       <div class="free-badge">🥊 Hoy: Gratis</div>
       <div class="note">Llevando el Cronograma Completo ahora mismo.</div>
     </div>
@@ -851,6 +866,7 @@
           <li class="off"><span class="li-mark off">×</span>Nutrición para Boxeadores</li>
           <li class="off"><span class="li-mark off">×</span>180 Sesiones Avanzadas</li>
           <li class="off"><span class="li-mark off">×</span>Comunidad de Entreno</li>
+          <li class="off"><span class="li-mark off">×</span>Abdomen de Acero</li>
         </ul>
 
         <button class="btn outline block" style="border-color:var(--ink); box-shadow:4px 4px 0 var(--ink);" onclick="sendPrompt('Quiero el Plan Básico')">Quiero el básico</button>
@@ -866,10 +882,11 @@
         <ul class="plan-list">
           <li><span class="li-mark">✓</span>Boxeo Desde Cero</li>
           <li><span class="li-mark">✓</span>Método Boxeo 365</li>
-          <li><span class="li-mark">✓</span>Fuerza 90</li>
-          <li><span class="li-mark">✓</span>Nutrición para Boxeadores</li>
-          <li><span class="li-mark">✓</span>180 Sesiones Avanzadas</li>
-          <li><span class="li-mark">✓</span>Comunidad de Entreno</li>
+          <li><span class="li-mark">✓</span>Fuerza 90 <span class="tag">BONO</span></li>
+          <li><span class="li-mark">✓</span>Nutrición para Boxeadores <span class="tag">BONO</span></li>
+          <li><span class="li-mark">✓</span>180 Sesiones Avanzadas <span class="tag">BONO</span></li>
+          <li><span class="li-mark">✓</span>Comunidad de Entreno <span class="tag">BONO</span></li>
+          <li><span class="li-mark">✓</span>Abdomen de Acero <span class="tag">BONO</span></li>
           <li><span class="li-mark">✓</span>Entrega inmediata</li>
           <li><span class="li-mark">✓</span>Acceso vitalicio</li>
         </ul>
