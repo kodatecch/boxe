@@ -193,78 +193,24 @@
   .hero-facts b{ font-family:var(--font-display); font-size:22px; display:block; line-height:1; }
   .hero-facts span{ font-family:var(--font-stamp); font-size:10.5px; color:var(--text-dim); text-transform:uppercase; }
 
-  /* ===== record card (hero centerpiece) ===== */
-  .record-stack{ position:relative; height:460px; display:flex; align-items:center; justify-content:center; }
-  .peek-card{
-    position:absolute;
-    width:170px;
-    background:var(--paper);
-    border:1px solid var(--line);
-    box-shadow:0 8px 18px rgba(30,26,22,0.14);
-    padding:14px 14px 16px 14px;
+  /* ===== product collage (hero centerpiece) ===== */
+  .product-collage { position:relative; height:460px; display:flex; align-items:center; justify-content:center; }
+  .prod-img {
+    position:absolute; width:170px; object-fit:contain;
+    transition:transform 0.2s ease, z-index 0s;
+    filter:drop-shadow(0 8px 18px rgba(30,26,22,0.18));
   }
-  .peek-card .top-tab{
-    display:inline-block;
-    font-family:var(--font-stamp);
-    font-size:9px;
-    letter-spacing:0.04em;
-    text-transform:uppercase;
-    background:var(--ink);
-    color:var(--cream);
-    padding:3px 8px;
-    margin-bottom:8px;
-  }
-  .peek-card h5{ font-family:var(--font-display); font-size:14px; line-height:1.1; letter-spacing:0.01em;}
-  .peek-card.p1{ top:6%; left:0%; transform:rotate(-9deg); z-index:1;}
-  .peek-card.p2{ bottom:8%; right:2%; transform:rotate(7deg); z-index:1;}
-
-  .record-card{
-    position:relative;
-    width:280px;
-    background:var(--paper);
-    border:1px solid var(--line);
-    box-shadow:0 20px 44px rgba(30,26,22,0.22);
-    padding:26px 24px 26px 58px;
-    z-index:2;
-  }
-  .record-card .k{
-    font-family:var(--font-stamp);
-    font-size:10.5px;
-    color:var(--text-dim);
-    letter-spacing:0.05em;
-    text-transform:uppercase;
-    display:block;
-    margin-bottom:14px;
-    border-bottom:1px solid var(--line-soft);
-    padding-bottom:10px;
-  }
-  .record-card .score{
-    font-family:var(--font-display);
-    font-size:52px;
-    color:var(--ink);
-    line-height:1;
-    letter-spacing:0.01em;
-  }
-  .record-card .score span{ color:var(--red); }
-  .record-card .score-label{
-    font-family:var(--font-stamp);
-    font-size:11px;
-    color:var(--text-dim);
-    margin-top:8px;
-    line-height:1.5;
-  }
-  .record-card .approved{
-    position:absolute;
-    top:18px; right:-6px;
-    font-family:var(--font-stamp);
-    font-size:14px;
-    color:var(--red-deep);
-    border:2px solid var(--red-deep);
-    padding:4px 10px;
-    transform:rotate(-10deg);
-    mix-blend-mode:multiply;
-    opacity:0.85;
-    border-radius:2px;
+  .prod-img:hover { transform:scale(1.08) !important; z-index:10 !important; filter:drop-shadow(0 20px 44px rgba(30,26,22,0.35)); }
+  
+  .pc1 { top:0%; left:8%; transform:rotate(-9deg); z-index:1; }
+  .pc2 { top:6%; right:8%; transform:rotate(7deg); z-index:2; }
+  .pc3 { bottom:4%; left:12%; transform:rotate(8deg); z-index:3; }
+  .pc4 { bottom:2%; right:10%; transform:rotate(-6deg); z-index:4; }
+  .pc6 { top:25%; left:-5%; transform:rotate(-14deg); z-index:2; }
+  .pc7 { top:35%; right:-5%; transform:rotate(12deg); z-index:3; }
+  .pc5 { 
+    top:50%; left:50%; transform:translate(-50%, -50%) rotate(-1deg); z-index:5; width:260px;
+    filter:drop-shadow(0 15px 34px rgba(30,26,22,0.3));
   }
 
   /* ===== SECTION HEADERS ===== */
@@ -508,9 +454,9 @@
   .exclusive-box .txt{ font-size:14px; font-weight:700; }
 
   .save-badge{
-    display:inline-block; font-family:var(--font-stamp); font-size:11px; font-weight:700;
+    display:inline-block; font-family:var(--font-display); font-size:24px; font-weight:800;
     color:var(--red-deep); background:var(--red-wash);
-    padding:5px 12px; margin-bottom:14px;
+    padding:8px 18px; margin-bottom:14px; letter-spacing:0.02em; border:2px dashed var(--red-deep); transform:rotate(-2deg);
   }
 
   .plan-cta-note{
@@ -603,15 +549,14 @@
       </div>
     </div>
 
-    <div class="record-stack">
-      <div class="peek-card p1"><span class="top-tab">Bono</span><h5>Manual de Golpes</h5></div>
-      <div class="peek-card p2"><span class="top-tab">Bono</span><h5>Cronómetro de Asaltos</h5></div>
-      <div class="record-card">
-        <span class="approved">Aprobado</span>
-        <span class="k">Ficha oficial de entreno</span>
-        <div class="score">365<span>-0-0</span></div>
-        <div class="score-label">tu récord al completar<br>el año entero de entreno</div>
-      </div>
+    <div class="product-collage">
+      <img src="boxeo_desde_cero.png" alt="Boxeo Desde Cero" class="prod-img pc1">
+      <img src="metodo_boxeo.png" alt="Método Boxeo 365" class="prod-img pc5">
+      <img src="protecto_fuerza.png" alt="Fuerza 90" class="prod-img pc3">
+      <img src="nutricion.png" alt="Nutrición para Boxeadores" class="prod-img pc4">
+      <img src="abdomen.webp" alt="Abdomen de Acero" class="prod-img pc6">
+      <img src="biblioteca.webp" alt="180 Sesiones Avanzadas" class="prod-img pc7">
+      <img src="sistema_de_progresso.png" alt="Plan Completo" class="prod-img pc2">
     </div>
   </div>
 </section>
@@ -841,8 +786,8 @@
         <div class="bonus-photo"><svg viewBox="0 0 24 24" fill="none"><rect x="4" y="4" width="16" height="16" rx="1" stroke="#1E1A16" stroke-width="1.4"/><circle cx="9" cy="10" r="1.6" stroke="#1E1A16" stroke-width="1.2"/><path d="M5 17l5-5 3 3 3-4 3 6" stroke="#1E1A16" stroke-width="1.2"/></svg></div>
         <div>
           <span class="bonus-num">Bono 01</span>
-          <h4>Manual Ilustrado de Golpes Fundamentales</h4>
-          <p>Cada movimiento dibujado cuadro a cuadro, con los errores más comunes marcados.</p>
+          <h4>Fuerza 90</h4>
+          <p>Rutinas enfocadas en ganar fuerza y explosión específica para boxeo.</p>
           <div class="price-row"><span class="price-old">de $29</span><span class="price-free">Por $0.00</span></div>
         </div>
       </div>
@@ -850,7 +795,7 @@
         <div class="bonus-photo"><svg viewBox="0 0 24 24" fill="none"><rect x="4" y="4" width="16" height="16" rx="1" stroke="#1E1A16" stroke-width="1.4"/><circle cx="9" cy="10" r="1.6" stroke="#1E1A16" stroke-width="1.2"/><path d="M5 17l5-5 3 3 3-4 3 6" stroke="#1E1A16" stroke-width="1.2"/></svg></div>
         <div>
           <span class="bonus-num">Bono 02</span>
-          <h4>Guía de Alimentación del Luchador</h4>
+          <h4>Nutrición para Boxeadores</h4>
           <p>Qué comer antes y después del entreno para tener energía sin convertirse en dieta de atleta.</p>
           <div class="price-row"><span class="price-old">de $27</span><span class="price-free">Por $0.00</span></div>
         </div>
@@ -859,8 +804,8 @@
         <div class="bonus-photo"><svg viewBox="0 0 24 24" fill="none"><rect x="4" y="4" width="16" height="16" rx="1" stroke="#1E1A16" stroke-width="1.4"/><circle cx="9" cy="10" r="1.6" stroke="#1E1A16" stroke-width="1.2"/><path d="M5 17l5-5 3 3 3-4 3 6" stroke="#1E1A16" stroke-width="1.2"/></svg></div>
         <div>
           <span class="bonus-num">Bono 03</span>
-          <h4>Cronómetro de Asaltos Digital</h4>
-          <p>3 minutos de round, 1 de descanso — a tu ritmo, directo desde el celular.</p>
+          <h4>180 Sesiones Avanzadas</h4>
+          <p>Lleva tu entrenamiento al siguiente nivel con rutinas de alta intensidad para todo el año.</p>
           <div class="price-row"><span class="price-old">de $19</span><span class="price-free">Por $0.00</span></div>
         </div>
       </div>
@@ -868,8 +813,8 @@
         <div class="bonus-photo"><svg viewBox="0 0 24 24" fill="none"><rect x="4" y="4" width="16" height="16" rx="1" stroke="#1E1A16" stroke-width="1.4"/><circle cx="9" cy="10" r="1.6" stroke="#1E1A16" stroke-width="1.2"/><path d="M5 17l5-5 3 3 3-4 3 6" stroke="#1E1A16" stroke-width="1.2"/></svg></div>
         <div>
           <span class="bonus-num">Bono 04</span>
-          <h4>Diario de Evolución del Luchador</h4>
-          <p>Registra cada entreno y sigue tu evolución técnica mes a mes.</p>
+          <h4>Comunidad de Entreno</h4>
+          <p>Acceso al grupo exclusivo para corrección de postura y apoyo diario con otros luchadores.</p>
           <div class="price-row"><span class="price-old">de $17</span><span class="price-free">Por $0.00</span></div>
         </div>
       </div>
@@ -895,42 +840,38 @@
 
     <div class="plans-grid">
       <div class="plan-card punch">
-        <div class="plan-name">Cronograma Esencial</div>
+        <div class="plan-name">Plan Básico</div>
         <div class="plan-price"><span class="old">$15</span><span class="new" style="color:var(--ink);">$5</span></div>
         <span class="plan-terms" style="color:var(--text-dim); background:var(--cream);">Pago único</span>
 
         <ul class="plan-list">
-          <li><span class="li-mark">✓</span>365 días de entreno</li>
-          <li class="off"><span class="li-mark off">×</span>Bono 01 — Manual de Golpes</li>
-          <li class="off"><span class="li-mark off">×</span>Bono 02 — Guía de Alimentación</li>
-          <li class="off"><span class="li-mark off">×</span>Bono 03 — Cronómetro de Asaltos</li>
-          <li class="off"><span class="li-mark off">×</span>Bono 04 — Diario de Evolución</li>
+          <li><span class="li-mark">✓</span>Boxeo Desde Cero</li>
+          <li><span class="li-mark">✓</span>Método Boxeo 365</li>
+          <li class="off"><span class="li-mark off">×</span>Fuerza 90</li>
+          <li class="off"><span class="li-mark off">×</span>Nutrición para Boxeadores</li>
+          <li class="off"><span class="li-mark off">×</span>180 Sesiones Avanzadas</li>
+          <li class="off"><span class="li-mark off">×</span>Comunidad de Entreno</li>
         </ul>
 
-        <button class="btn outline block" style="border-color:var(--ink); box-shadow:4px 4px 0 var(--ink);" onclick="sendPrompt('Quiero el Cronograma Esencial')">Quiero el esencial</button>
+        <button class="btn outline block" style="border-color:var(--ink); box-shadow:4px 4px 0 var(--ink);" onclick="sendPrompt('Quiero el Plan Básico')">Quiero el básico</button>
       </div>
 
       <div class="plan-card featured punch">
         <span class="approved">Más vendido</span>
-        <div class="plan-name">Cronograma Completo</div>
+        <div class="plan-name">Plan Completo</div>
         <span class="save-badge">Ahorras más del 45%</span>
         <div class="plan-price"><span class="old">$27</span><span class="new">$15</span></div>
         <span class="plan-terms">Pago único · Acceso inmediato</span>
 
         <ul class="plan-list">
-          <li><span class="li-mark">✓</span>365 días de entreno</li>
-          <li><span class="li-mark">✓</span>Todos los 4 bonos exclusivos ($92)</li>
-        </ul>
-
-        <div class="exclusive-box">
-          <span class="tag">Exclusivo de este plan</span>
-          <div class="txt">+ Comunidad de entreno con corrección de postura</div>
-        </div>
-
-        <ul class="plan-list">
+          <li><span class="li-mark">✓</span>Boxeo Desde Cero</li>
+          <li><span class="li-mark">✓</span>Método Boxeo 365</li>
+          <li><span class="li-mark">✓</span>Fuerza 90</li>
+          <li><span class="li-mark">✓</span>Nutrición para Boxeadores</li>
+          <li><span class="li-mark">✓</span>180 Sesiones Avanzadas</li>
+          <li><span class="li-mark">✓</span>Comunidad de Entreno</li>
           <li><span class="li-mark">✓</span>Entrega inmediata</li>
           <li><span class="li-mark">✓</span>Acceso vitalicio</li>
-          <li><span class="li-mark">✓</span>Recepción por e-mail &amp; WhatsApp</li>
         </ul>
 
         <button class="btn block" onclick="sendPrompt('Quiero el cronograma completo')">Quiero el cronograma completo</button>
