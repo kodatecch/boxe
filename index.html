@@ -255,27 +255,14 @@
   }
   .carousel-track::-webkit-scrollbar{ display:none; }
   
-  .prev-card{
-    flex:0 0 221px;
-    background:var(--paper);
-    border:1px solid var(--line);
-    padding:12px;
-    position:relative;
+  .carousel-img {
+    flex: 0 0 auto;
+    height: 360px;
+    width: auto;
+    border: 1px solid var(--line);
+    border-radius: 4px;
+    box-shadow: 0 6px 14px rgba(30,26,22,0.08);
   }
-  .prev-card .idx{
-    position:absolute; top:8px; right:12px;
-    font-family:var(--font-stamp); font-size:11px; color:var(--text-dim);
-  }
-  .prev-card .ph{
-    height:243px; margin-bottom:12px;
-    display:flex; align-items:center; justify-content:center;
-    border:1px solid var(--ink);
-    background:var(--paper);
-    overflow:hidden;
-  }
-  .prev-card .ph svg{ width:100%; height:100%; }
-  .prev-card h4{ font-family:var(--font-display); font-size:23px; letter-spacing:0.01em; margin-bottom:6px; line-height:1.1;}
-  .prev-card p{ font-size:16px; color:var(--text-dim); line-height:1.45;}
 
   /* ===== CATEGORIAS ===== */
   .categorias{ background:var(--cream); }
@@ -576,29 +563,12 @@
 
   <div class="bleed">
     <div class="carousel-track" id="carousel">
-      <div class="prev-card"><span class="idx">01</span><div class="ph">
-        <img src="1.png" style="width:100%; height:100%; object-fit:cover;">
-      </div><h4>Calendario de Julio</h4><p>Entrenos diarios organizados por semana y fase.</p></div>
-
-      <div class="prev-card"><span class="idx">02</span><div class="ph">
-        <img src="2.png" style="width:100%; height:100%; object-fit:cover;">
-      </div><h4>Jab y Directo</h4><p>Golpe ilustrado paso a paso, con ángulo y extensión.</p></div>
-
-      <div class="prev-card"><span class="idx">03</span><div class="ph">
-        <img src="3.png" style="width:100%; height:100%; object-fit:cover;">
-      </div><h4>Semana de Acondicionamiento</h4><p>Distribución de fuerza, técnica y descanso.</p></div>
-
-      <div class="prev-card"><span class="idx">04</span><div class="ph">
-        <img src="4.png" style="width:100%; height:100%; object-fit:cover;">
-      </div><h4>Sigue tu evolución</h4><p>Marca cada día entrenado en el año.</p></div>
-
-      <div class="prev-card"><span class="idx">05</span><div class="ph">
-        <img src="5.png" style="width:100%; height:100%; object-fit:cover;">
-      </div><h4>Meta del Día</h4><p>Un foco técnico específico por sesión.</p></div>
-
-      <div class="prev-card"><span class="idx">06</span><div class="ph">
-        <img src="6.png" style="width:100%; height:100%; object-fit:cover;">
-      </div><h4>Visión del Año Completo</h4><p>Todos los días organizados en un panel.</p></div>
+      <img src="1.png" class="carousel-img" alt="Página 1">
+      <img src="2.png" class="carousel-img" alt="Página 2">
+      <img src="3.png" class="carousel-img" alt="Página 3">
+      <img src="4.png" class="carousel-img" alt="Página 4">
+      <img src="5.png" class="carousel-img" alt="Página 5">
+      <img src="6.png" class="carousel-img" alt="Página 6">
     </div>
   </div>
 </section>
